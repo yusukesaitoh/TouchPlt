@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  TouchPlt
+
+  Created by Yusuke Saitoh on 2013/11/13.
+  Copyright (c) 2013年 Yusuke Saitoh. All rights reserved.
+*/
+
+"mode_draw" = "Draw";
+"mode_move" = "Move";
+"mode_delete" = "Delete";
+"mode_close" = "Close";
+
+"ex_title" = "Select Export Type";
+"ex_thin" = "Thin Paper";
+"ex_normal" = "Normal Paper";
+"ex_thick" = "Thick Paper";
+"ex_pen" = "Pen Drawing";
+"ex_svg" = "SVG";
+
+"al_delete_m" = "Do you want to delete all lines?";
+"yes" = "Yes";
+"no" = "No";
+
+"al_saved_m" = "The message was saved.";
+"al_sent_m" = "The message was sent.";
+"al_not_sent_m" = "The message wasn't sent.";
+
+"usage_title" = "Usage";
+"usage_img" = "img_usage_en";
+"close" = "Close";
+"usage_message" = "If you finished drawing a picture, tap the output button at the bottom right of the screen.\n\nWhen you cut paper or cutting sheets, choose Thin paper, Normal paper, or Thick paper. When you use a ballpoint, choose Pen Drawing. When you edit data by Illustrator, choose SVG.\n\nThen, send data to a PC by e-mail. And output to a cutting machine by Cutting Master (plug-in for Illustrator of Craft ROBO).\n\nOperation has been confirmed on Craft ROBO.";

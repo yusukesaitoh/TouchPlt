@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  TouchPlt
+
+  Created by Yusuke Saitoh on 2013/11/13.
+  Copyright (c) 2013年 Yusuke Saitoh. All rights reserved.
+*/
+
+"mode_draw" = "かく";
+"mode_move" = "いどう";
+"mode_delete" = "けす";
+"mode_close" = "とじる";
+
+"ex_title" = "出力タイプを選んでください";
+"ex_thin" = "うすい紙";
+"ex_normal" = "ふつうの紙";
+"ex_thick" = "あつい紙";
+"ex_pen" = "ペン";
+"ex_svg" = "SVG";
+
+"al_delete_m" = "すべての線を消しますか？";
+"yes" = "はい";
+"no" = "いいえ";
+
+"al_saved_m" = "メッセージを保存しました。";
+"al_sent_m" = "メッセージを送信しました。";
+"al_not_sent_m" = "メッセージを送信できませんでした。";
+
+"usage_title" = "つかいかた";
+"usage_img" = "img_usage_jp";
+"close" = "とじる";
+"usage_message" = "画面に絵を描いたら、右下の出力ボタンをタップしてください。\n\n紙やカッティングシートを切る場合は「うすい紙／ふつうの紙／あつい紙」を、ボールペンで絵を描く場合は「ペン」を、Illustratorなど編集ソフトで図形を使いたい場合は「SVG」を選びます。\nメールでデータをパソコンに送り、Cutting Master (Craft ROBOのIllustrator用プラグイン) からカッティングマシンへ出力します。\n\nGraphtec社のCraft ROBOで動作を確認しています。";
