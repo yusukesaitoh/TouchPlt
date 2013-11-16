@@ -1,7 +1,7 @@
 TouchPlt
 =================
 
-This is software to convert the hand-drawing into the data for cutting machines.
+This is software to convert the hand-drawing into the data for cutting machines.  
 iOSで手描きした線をカッティングマシン(Graphtec社製)用のカットデータかsvgファイルに変換してメールで送れるプログラムです。
 
 ## Requirements
