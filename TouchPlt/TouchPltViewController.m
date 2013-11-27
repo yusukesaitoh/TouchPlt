@@ -35,11 +35,19 @@
     // Toolbar
     modeSegmentedControl = [[UISegmentedControl alloc]initWithItems:@[NSLocalizedString(@"mode_draw", nil), NSLocalizedString(@"mode_move", nil), NSLocalizedString(@"mode_delete", nil), NSLocalizedString(@"mode_close", nil), NSLocalizedString(@"mode_copy", nil)]];
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-        [modeSegmentedControl setTitleTextAttributes:
-         [ NSDictionary dictionaryWithObject:[ UIFont systemFontOfSize:10 ]
-                                      forKey:UITextAttributeFont ]
-                                            forState:UIControlStateNormal];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+            [modeSegmentedControl setTitleTextAttributes:
+             [ NSDictionary dictionaryWithObject:[ UIFont systemFontOfSize:10 ]
+                                          forKey:UITextAttributeFont ]
+                                                forState:UIControlStateNormal];
+        } else {
+            [modeSegmentedControl setTitleTextAttributes:
+             [ NSDictionary dictionaryWithObject:[ UIFont boldSystemFontOfSize:10 ]
+                                          forKey:UITextAttributeFont ]
+                                                forState:UIControlStateNormal];
+        }
+    }
 
     modeSegmentedControl.selectedSegmentIndex = 0;
     modeSegmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
