@@ -87,6 +87,9 @@
     } else if (self.mode == 3) {
         CGContextSetRGBFillColor(context, 0.0f, 1.0f, 0.0f, 0.05f);
         CGContextDrawPath(context, kCGPathEOFillStroke);
+    } else if (self.mode == 4) {
+        CGContextSetRGBFillColor(context, 1.0f, 1.0f, 0.0f, 0.05f);
+        CGContextDrawPath(context, kCGPathEOFillStroke);
     } else {
         CGContextStrokePath(context);
     }
@@ -225,6 +228,19 @@
             }
                 break;
                 
+            case 4:
+            {
+                for(int i = 0; i < self.polygons.count; i++){
+                    Polygon *polygon = [self.polygons objectAtIndex:i];
+                    if([self polygonContainsPoint:polygon point:crntPt])
+                    {
+                        editingPolygon = [polygon copy];
+                        break;
+                    }
+                }
+            }
+                break;
+                
             default:
                 break;
         }
@@ -250,6 +266,7 @@
                 break;
                 
             case 1:
+            case 4:
             {
                 float dx = crntPt.x - prevPt.x;
                 float dy = crntPt.y - prevPt.y;
@@ -316,6 +333,16 @@
                 if(editingPolygon) [self.polygons insertObject:editingPolygon atIndex:editingIndex];
                 editingPolygon = nil;
                 editingIndex = 0;
+            }
+                break;
+                
+            case 4:
+            {
+                if (editingPolygon) {
+                    editingPolygon.points = [self douglasPeucker:editingPolygon.points];
+                    [self.polygons insertObject:editingPolygon atIndex:0];
+                    editingPolygon = nil;
+                }
             }
                 break;
                 

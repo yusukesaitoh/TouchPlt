@@ -33,7 +33,14 @@
     self.navigationItem.rightBarButtonItem = guideBarButtonItem;
     
     // Toolbar
-    modeSegmentedControl = [[UISegmentedControl alloc]initWithItems:@[NSLocalizedString(@"mode_draw", nil), NSLocalizedString(@"mode_move", nil), NSLocalizedString(@"mode_delete", nil), NSLocalizedString(@"mode_close", nil)]];
+    modeSegmentedControl = [[UISegmentedControl alloc]initWithItems:@[NSLocalizedString(@"mode_draw", nil), NSLocalizedString(@"mode_move", nil), NSLocalizedString(@"mode_delete", nil), NSLocalizedString(@"mode_close", nil), NSLocalizedString(@"mode_copy", nil)]];
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        [modeSegmentedControl setTitleTextAttributes:
+         [ NSDictionary dictionaryWithObject:[ UIFont systemFontOfSize:10 ]
+                                      forKey:UITextAttributeFont ]
+                                            forState:UIControlStateNormal];
+
     modeSegmentedControl.selectedSegmentIndex = 0;
     modeSegmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
     [modeSegmentedControl addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -86,7 +93,7 @@
 #pragma mark - UIControl
 
 - (void)valueChanged:(id)sender
-{
+{    
     UISegmentedControl *segmentedControl = (UISegmentedControl*)sender;
     canvasView.mode = segmentedControl.selectedSegmentIndex;
     [canvasView setNeedsDisplay];

@@ -50,22 +50,22 @@
     switch (exportType) {
         case 0:
             // Thin
-            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,SO0,L0,!110,FX2,0,FC18,";
+            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,L0,!110,FX2,0,FC18,";
             break;
             
         case 1:
             // Normal
-            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,SO0,L0,!110,FX10,0,FC18,";
+            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,L0,!110,FX10,0,FC18,";
             break;
             
         case 2:
             // Thick
-            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,SO0,L0,!110,FX27,0,FC18,";
+            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,L0,!110,FX27,0,FC18,";
             break;
             
         case 3:
             // Pen Drawing
-            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,SO0,L0,!110,FX10,0,FC0,";
+            settingPrefix = @"FN0,&100,100,100,^0,0,\\0,0,L0,!110,FX10,0,FC0,";
             break;
     }
     

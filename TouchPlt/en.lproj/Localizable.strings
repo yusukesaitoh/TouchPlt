@@ -10,6 +10,7 @@
 "mode_move" = "Move";
 "mode_delete" = "Delete";
 "mode_close" = "Close";
+"mode_copy" = "Copy";
 
 "ex_title" = "Select Export Type";
 "ex_thin" = "Thin Paper";

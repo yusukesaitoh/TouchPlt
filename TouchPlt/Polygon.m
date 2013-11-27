@@ -20,14 +20,18 @@
     return self;
 }
 
-- (id)initWithPoints:(NSMutableArray *)points
+- (id)copyWithZone:(NSZone*)zone
 {
-    self = [super init];
-    if (self) {
-        self.points = points;
-        self.isClosed = NO;
+    Polygon* result = [[[self class] allocWithZone:zone] init];
+    
+    if (result)
+    {
+        
+        result->_points = [[NSMutableArray allocWithZone:zone] initWithArray:_points copyItems:YES];
+        result->_isClosed = _isClosed;
     }
-    return self;
+    
+    return result;
 }
 
 - (CGRect)frame {

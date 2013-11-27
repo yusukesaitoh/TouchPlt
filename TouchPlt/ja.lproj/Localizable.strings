@@ -10,6 +10,7 @@
 "mode_move" = "いどう";
 "mode_delete" = "けす";
 "mode_close" = "とじる";
+"mode_copy" = "コピー";
 
 "ex_title" = "出力タイプを選んでください";
 "ex_thin" = "うすい紙";

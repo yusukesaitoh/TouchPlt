@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Polygon : NSObject {
+@interface Polygon : NSObject <NSCopying>{
     
 }
 - (CGRect)frame;
-- (id)initWithPoints:(NSMutableArray *)points;
 
 @property(strong) NSMutableArray *points;
 @property(assign) BOOL isClosed;
